@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./access/style.css">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+ 
+  <link rel="stylesheet"
+     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin="" defer></script>
+ 
+  <script src="./access/index.js" defer></script>
+</head>
+<body>
+  <div class="main-container">
+    <div class="inner-container">
+      <div class="form-container">
+        <h1 class="title">IP Address Tracker</h1>
+        <form class="form-element">
+          <input type="text" name="ip-address" id="ip-address" class="form-control" placeholder="Search for any IP address or domain">
+          <button id="search-btn" class="btn">
+            <img src="./images/icon-arrow.svg" alt="arrow">
+          </button>
+        </form>
+      </div>
+  
+      <div class="result-display">
+        <div class="display-container">
+          <div class="info-block block-seperator">
+            <h4 class="sub-title">IP Address</h4>
+            <span id="current-ip" class="result">192.212.174.101</span>
+          </div>
+          <div class="info-block block-seperator">
+            <h4 class="sub-title">Location</h4>
+            <span id="current-location" class="result">Brooklyn, NY 10001</span>
+          </div>
+          <div class="info-block block-seperator">
+            <h4 class="sub-title">Timezone</h4>
+            <span id="current-zone" class="result">UTC -05:00</span>
+          </div>
+          <div class="info-block ">
+            <h4 class="sub-title">ISP</h4>
+            <span id="current-isp" class="result">SpaceX Starlink</span>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+
+    <div id="display-map" class="map-container"></div>
+  </div>
+
+
+  
+</body>
+</html>
